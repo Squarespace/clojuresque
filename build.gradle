@@ -31,7 +31,7 @@ dependencies {
 
     compile "clojuresque:clojuresque-base:1.6.0-SNAPSHOT"
     compile "clojuresque:clojuresque-nrepl:1.0.0-SNAPSHOT"
-    compile "clojuresque:clojuresque-extras:1.0.0-SNAPSHOT"
+    compile "clojuresque:clojuresque-extras:1.0.0"
     compile "clojuresque:clojuresque-clojars:1.3.0"
 }
 
