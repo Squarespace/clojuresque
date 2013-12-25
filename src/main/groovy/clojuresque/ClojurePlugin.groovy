@@ -31,6 +31,6 @@ class ClojurePlugin implements Plugin<Project> {
         project.apply plugin: "clojure-base"
         project.apply plugin: "clojure-nrepl"
         project.apply plugin: "clojure-extras"
-        project.apply plugin: "clojars"
+        project.apply plugin: "clojure-clojars"
     }
 }

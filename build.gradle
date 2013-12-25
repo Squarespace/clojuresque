@@ -18,6 +18,13 @@ ext.kotka = [
     wrapperVersion: "1.10"
 ]
 
+ext.clojuresquePlugins = [
+    base:    "1.6.0",
+    nrepl:   "1.1.0",
+    extras:  "1.1.0",
+    clojars: "1.4.1"
+]
+
 apply plugin: 'kotka'
 apply plugin: 'groovy'
 
@@ -29,10 +36,9 @@ dependencies {
     compile gradleApi()
     compile localGroovy()
 
-    compile "clojuresque:clojuresque-base:1.6.0-SNAPSHOT"
-    compile "clojuresque:clojuresque-nrepl:1.0.0-SNAPSHOT"
-    compile "clojuresque:clojuresque-extras:1.0.0"
-    compile "clojuresque:clojuresque-clojars:1.3.0"
+    project.clojuresquePlugins.each { plugin, version ->
+        compile "clojuresque:clojuresque-${plugin}:${version}"
+    }
 }
 
 compileGroovy {
