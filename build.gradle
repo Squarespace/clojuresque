@@ -15,7 +15,7 @@ description = "A Clojure plugin for gradle"
 
 ext.kotka = [
     repository:     "clojuresque/clojuresque",
-    wrapperVersion: "1.8"
+    wrapperVersion: "1.10"
 ]
 
 apply plugin: 'kotka'
