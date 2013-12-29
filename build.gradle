@@ -19,7 +19,7 @@ ext.kotka = [
 ]
 
 ext.clojuresquePlugins = [
-    base:    "1.6.0",
+    base:    "1.7.0",
     nrepl:   "1.1.0",
     extras:  "1.1.0",
     clojars: "1.4.1"
