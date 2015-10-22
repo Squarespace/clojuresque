@@ -6,7 +6,7 @@ plugins {
 
 apply plugin: 'groovy'
 
-group = 'clojuresque'
+group = 'de.kotka.clojuresque'
 version = '1.8.0-SNAPSHOT'
 description = "A Clojure plugin for gradle"
 
@@ -18,14 +18,13 @@ kotka {
 }
 
 ext.clojuresquePlugins = [
-    base:    "1.7.0",
-    nrepl:   "1.1.0",
-    extras:  "1.1.0",
-    clojars: "1.4.1"
+    base:    "2.0.0",
+    nrepl:   "2.0.0",
+    extras:  "2.0.0"
 ]
 
 repositories {
-    mavenCentral()
+    jcenter()
 }
 
 dependencies {
@@ -33,7 +32,7 @@ dependencies {
     compile localGroovy()
 
     project.clojuresquePlugins.each { plugin, version ->
-        compile "clojuresque:clojuresque-${plugin}:${version}"
+        compile "de.kotka.clojuresque:clojuresque-${plugin}:${version}"
     }
 }
 

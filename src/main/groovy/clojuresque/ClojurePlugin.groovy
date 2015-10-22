@@ -28,9 +28,8 @@ import org.gradle.api.Project
 
 class ClojurePlugin implements Plugin<Project> {
     void apply(Project project) {
-        project.apply plugin: "clojure-base"
-        project.apply plugin: "clojure-nrepl"
-        project.apply plugin: "clojure-extras"
-        project.apply plugin: "clojure-clojars"
+        project.apply plugin: "de.kotka.clojuresque.base"
+        project.apply plugin: "de.kotka.clojuresque.nrepl"
+        project.apply plugin: "de.kotka.clojuresque.extras"
     }
 }
