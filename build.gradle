@@ -40,3 +40,17 @@ compileGroovy {
     sourceCompatibility = "1.6"
     targetCompatibility = "1.6"
 }
+
+pluginBundle {
+    website = 'https://bitbucket.org/clojuresque/clojuresque'
+    vcsUrl = 'https://bitbucket.org/clojuresque/clojuresque'
+    description = project.description
+    tags = ['clojure']
+
+    plugins {
+        clojurePlugin {
+            id = 'de.kotka.clojuresque.clojure'
+            displayName = project.description
+        }
+    }
+}
