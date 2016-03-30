@@ -25,7 +25,6 @@ repositories {
 }
 
 ext.clojuresquePlugins = [
-  base: '2.0.0.2',
   nrepl: '2.0.0',
   extras: '2.0.0'
 ]
@@ -33,7 +32,9 @@ ext.clojuresquePlugins = [
 dependencies {
   compile gradleApi()
   compile localGroovy()
-
+  
+  compile 'com.squarespace.de.kotka.clojuresque:clojuresque-base:2.0.0.2'
+  
   project.clojuresquePlugins.each { plugin, version ->
     compile "de.kotka.clojuresque:clojuresque-${plugin}:${version}"
   }
