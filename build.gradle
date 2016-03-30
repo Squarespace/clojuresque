@@ -7,23 +7,24 @@ plugins {
 apply plugin: 'groovy'
 
 group = 'de.kotka.clojuresque'
-version = '2.0.0'
+version = '2.0.1-SNAPSHOT'
 description = "A Clojure plugin for gradle"
 
 kotka {
-    wrapperVersion = "2.7"
+    wrapperVersion = "2.12"
     licenses   = [ "EUPL-1.1", "MIT" ]
     repository = "clojuresque/clojuresque"
     bintray    = [ repo: "clojuresque" ]
 }
 
 ext.clojuresquePlugins = [
-    base:    "2.0.0",
+    base:    "2.0.1-SNAPSHOT",
     nrepl:   "2.0.0",
     extras:  "2.0.0"
 ]
 
 repositories {
+    mavenLocal()
     jcenter()
 }
 
